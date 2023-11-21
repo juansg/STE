@@ -1,0 +1,57 @@
+Strip size:  75
+Nthreads:  4
+Time elapsed: 265625 ms
+Event0: RTM_RETIRED.COMMIT Number of times an RTM execution successfully committed (raw 0x2c9)
+Event1: RTM_RETIRED.ABORTED Number of times an RTM execution aborted due to any reasons (multiple categories may count as one) (raw 0x4c9)
+Event2: RTM_RETIRED.ABORTED_MISC1 Number of times an RTM execution aborted due to various memory events (raw 0x8c9)
+
+Core | Event0  | Event1  | Event2  | Event3 
+   0   6108 K      21 M    4710 K       0      
+   1   1489 K    4374 K    1229 K       0      
+   2   1502 K    4370 K    1208 K       0      
+   3   1428 K    4167 K    1173 K       0      
+   4      0         2         2         0      
+   5      0         0         0         0      
+   6      0         2         2         0      
+   7      0         0         0         0      
+-------------------------------------------------------------------------------------------------------------------
+   *     10 M      34 M    8323 K       0      
+
+Strip size:  75
+Nthreads:  4
+Time elapsed: 265296 ms
+Event0: RTM_RETIRED.ABORTED Number of times an RTM execution aborted due to any reasons (multiple categories may count as one) (raw 0x4c9)
+Event1: RTM_RETIRED.ABORTED_MISC3 Number of times an RTM execution aborted due to Intel TSX-unfriendly instructions (raw 0x20c9)
+Event2: RTM_RETIRED.ABORTED_MISC5 Number of times an RTM execution aborted due to none of the previous 4 categories (e.g. interrupt) (raw 0x80c9)
+
+Core | Event0  | Event1  | Event2  | Event3 
+   0     20 M      15 M     195 K       0      
+   1   4356 K    3027 K      96 K       0      
+   2   4042 K    2810 K      87 K       0      
+   3   3835 K    2643 K      79 K       0      
+   4      0         0         0         0      
+   5      0         0         0         0      
+   6      0        21        21         0      
+   7      0         0         0         0      
+-------------------------------------------------------------------------------------------------------------------
+   *     32 M      23 M     459 K       0      
+
+Strip size:  75
+Nthreads:  4
+Time elapsed: 265252 ms
+Event0: RTM_RETIRED.ABORTED_MISC1 Number of times an RTM execution aborted due to various memory events (raw 0x8c9)
+Event1: TX_MEM.ABORT_CONFLICT Number of times a transactional abort was signaled due to a data conflict on a transactionally accessed address (raw 0x154)
+Event2: TX_MEM.ABORT_CAPACITY_WRITE Number of times a transactional abort was signaled due to limited resources for transactional stores (raw 0x254)
+
+Core | Event0  | Event1  | Event2  | Event3 
+   0   4703 K    5325 K      46         0      
+   1   1296 K    1416 K      11         0      
+   2   1219 K    1329 K      11         0      
+   3   1107 K    1202 K      11         0      
+   4      0         2         2         0      
+   5      0         0         0         0      
+   6      0         2         2         0      
+   7      0         0         0         0      
+-------------------------------------------------------------------------------------------------------------------
+   *   8326 K    9274 K      83         0      
+

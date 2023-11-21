@@ -1,0 +1,49 @@
+IWOMP23
+=======
+
+Compile LLVM12
+==============
+
+pathtoIWOMP23=
+
+cd $pathtoIWOMP23/Compiler+Runtime/libomp12/llvm12
+
+mkdir build
+
+cd build
+
+cmake -DCMAKE_BUILD_TYPE="Release" -DLLVM_ENABLE_PROJECTS="clang;openmp" -DCMAKE_INSTALL_PREFIX=$pathtoIWOMP23/Compiler+Runtime/libomp12/llvm12_install ../llvm
+
+cmake --build . -j 3
+
+cmake -DCMAKE_INSTALL_PREFIX=$pathtoIWOMP23/Compiler+Runtime/libomp12/llvm12_nstall -P cmake_install.cmake
+
+
+COMPILE Runtime libomp12
+========================
+
+cd $pathtoIWOMP23/Compiler+Runtime/libomp12/build_runtime_omp
+
+cmake  -DCMAKE_INSTALL_PREFIX=$pathtoIWOMP23/Compiler+Runtime/libomp12/llvm12_nstall ../llvm12/openmp
+
+cmake --build . -j 3
+
+cmake -DCMAKE_INSTALL_PREFIX=$pathtoIWOMP23/Compiler+Runtime/libomp12/llvm12_install -P cmake_install.cmake
+
+
+PATHS
+=====
+
+BASE_PATH=$pathtoIWOMP23/Compiler+Runtime/libomp12/llvm12_install
+
+export PATH=$BASE_PATH/bin:$PATH
+export C_INCLUDE_PATH=$BASE_PATH/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=$BASE_PATH/include:$CPLUS_INCLUDE_PATH
+export LIBRARY_PATH=$BASE_PATH/lib:$BASE_PATH/lib64:$LIBRARY_PATH
+export LD_LIBRARY_PATH=$BASE_PATH/lib:$BASE_PATH/lib64:$BASE_PATH/libexec:$BASE_PATH/libexec64:$LD_LIBRARY_PATH
+
+
+AFFINITY
+========
+
+export KMP_AFFINITY=granularity=fine,balanced

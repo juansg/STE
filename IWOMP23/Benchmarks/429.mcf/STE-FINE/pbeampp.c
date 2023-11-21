@@ -1,0 +1,396 @@
+/**************************************************************************
+PBEAMPP.C of ZIB optimizer MCF, SPEC version
+
+This software was developed at ZIB Berlin. Maintenance and revisions
+solely on responsibility of Andreas Loebel
+
+Dr. Andreas Loebel
+Ortlerweg 29b, 12207 Berlin
+
+Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+Scientific Computing - Optimization
+Takustr. 7, 14195 Berlin-Dahlem
+
+Copyright (c) 1998-2000 ZIB.
+Copyright (c) 2000-2002 ZIB & Loebel.
+Copyright (c) 2003-2005 Andreas Loebel.
+**************************************************************************/
+/*  LAST EDIT: Sun Nov 21 16:22:04 2004 by Andreas Loebel (boss.local.de)  */
+/*  $Id: pbeampp.c,v 1.10 2005/02/17 19:42:32 bzfloebe Exp $  */
+
+
+
+#define K 300
+#define B  50
+
+#include "pbeampp.h"
+#include <sys/time.h>
+#include <omp.h>
+#include <immintrin.h>
+
+
+
+#define MAX_SS 75
+
+
+#ifdef _PROTO_
+int bea_is_dual_infeasible( arc_t *arc, cost_t red_cost )
+#else
+int bea_is_dual_infeasible( arc, red_cost )
+arc_t *arc;
+cost_t red_cost;
+#endif
+{
+    return(    (red_cost < 0 && arc->ident == AT_LOWER)
+               || (red_cost > 0 && arc->ident == AT_UPPER) );
+}
+
+
+
+
+
+
+
+typedef struct basket
+{
+    arc_t *a;
+    cost_t cost;
+    cost_t abs_cost;
+} BASKET;
+
+static long basket_size;
+static BASKET basket[B+K+1];
+static BASKET *perm[B+K+1];
+
+
+
+#ifdef _PROTO_
+void sort_basket( long min, long max )
+#else
+void sort_basket( min, max )
+long min, max;
+#endif
+{
+    long l, r;
+    cost_t cut;
+    BASKET *xchange;
+
+    l = min;
+    r = max;
+
+    cut = perm[ (long)( (l+r) / 2 ) ]->abs_cost;
+
+    do
+    {
+        while( perm[l]->abs_cost > cut )
+            l++;
+        while( cut > perm[r]->abs_cost )
+            r--;
+
+        if( l < r )
+        {
+            xchange = perm[l];
+            perm[l] = perm[r];
+            perm[r] = xchange;
+        }
+        if( l <= r )
+        {
+            l++;
+            r--;
+        }
+
+    }
+    while( l <= r );
+
+    if( min < r )
+        sort_basket( min, r );
+    if( l < max && l <= B )
+        sort_basket( l, max );
+}
+
+
+
+
+
+
+static long nr_group;
+static long group_pos;
+
+
+static long initialize = 1;
+
+//long long count1 =0;
+//long long count2=0;
+//long long count3=0;
+
+//double tiempo_promedio=0;
+
+arc_t * next_iter; // __attribute__((aligned(64)));
+
+//char comp1[300],comp2[300],comp3[300];
+
+/*
+cost_t red_arr[300];
+long basket_arr[300];
+char cond_arr [300];
+*/
+
+#ifdef _PROTO_
+arc_t *primal_bea_mpp( long m,  arc_t *arcs, arc_t *stop_arcs,
+                       cost_t *red_cost_of_bea, const long STRIP_SIZE, const int nthreads )
+#else
+arc_t *primal_bea_mpp( m, arcs, stop_arcs, red_cost_of_bea,STRIP_SIZE, nthreads )
+long m;
+arc_t *arcs;
+arc_t *stop_arcs;
+cost_t *red_cost_of_bea;
+const long STRIP_SIZE;
+const int nthreads;
+#endif
+{
+    long i, next, old_group_pos;
+    arc_t *arc,*arc_strip,*arc2;
+    cost_t red_cost;
+
+
+    struct timeval start_time, end_time;
+    double run_time;
+
+
+
+    if( initialize )
+    {
+        for( i=1; i < K+B+1; i++ )
+            perm[i] = &(basket[i]);
+        nr_group = ( (m-1) / K ) + 1;
+        group_pos = 0;
+        basket_size = 0;
+        initialize = 0;
+    }
+    else
+    {
+        for( i = 2, next = 0; i <= B && i <= basket_size; i++ )
+        {
+            arc = perm[i]->a;
+            red_cost = arc->cost - arc->tail->potential + arc->head->potential;
+            if( (red_cost < 0 && arc->ident == AT_LOWER)
+                    || (red_cost > 0 && arc->ident == AT_UPPER) )
+            {
+                next++;
+                perm[next]->a = arc;
+                perm[next]->cost = red_cost;
+                perm[next]->abs_cost = ABS(red_cost);
+            }
+        }
+        basket_size = next;
+    }
+
+    old_group_pos = group_pos;
+
+NEXT:
+    /* price next group */
+
+
+    arc2 = arcs + group_pos;
+    next_iter=arc2;
+
+    //int iterations=  ceil(((long)stop_arcs-(long)arc2)*1.0/(nr_group*64));
+
+    //printf("iterations %d\n", iterations);
+
+    char cond1,cond2;
+
+    //int itera;
+
+    //gettimeofday(&start_time, NULL);
+    /*
+    #pragma omp parallel num_threads(nthreads) 
+    {
+    #pragma omp master
+    {
+    */
+    //#pragma omp taskloop grainsize(1) default(none)  firstprivate(stop_arcs,arc2,STRIP_SIZE) shared(next_iter_commit,basket_size,nr_group,perm)  private(red_cost,arc)
+    for(arc_strip =arc2  ; arc_strip < stop_arcs; arc_strip += nr_group*STRIP_SIZE)
+        //for( ; arc < stop_arcs; arc += nr_group )
+    {
+
+	 //if (itera==(ceil(iterations*1.0/STRIP_SIZE)-1) && (iterations%STRIP_SIZE)!=0) size=iterations%STRIP_SIZE; else size=STRIP_SIZE;
+	 //printf("size %d\n",size);
+
+        /*
+        #pragma omp task default(none) private(red_cost,arc) shared(cond_arr,red_arr) firstprivate(arc_strip,STRIP_SIZE,nr_group,stop_arcs,itera,size) depend(out:cond_arr[itera*STRIP_SIZE:size])
+        {
+	     //printf("comencé task1 iteration %d\n",itera);
+            char cond1,cond2;
+	     int iter;
+ 
+            for (arc=arc_strip,iter=0; ((arc-arc_strip)< STRIP_SIZE*nr_group) && (arc < stop_arcs); arc+=nr_group,iter++)
+            {
+
+                cond1= arc->ident > BASIC ;
+
+                if (cond1)
+                {
+                    red_cost = arc->cost - arc->tail->potential + arc->head->potential;
+                    cond2= bea_is_dual_infeasible( arc, red_cost ) ;
+                }//else cond2=1;
+                cond_arr[itera*STRIP_SIZE+iter]=cond1&&cond2;
+                red_arr[itera*STRIP_SIZE+iter]=red_cost;
+            }
+	     //comp1[itera]=1;
+	     //printf("terminé task1 iteration %d\n",itera);
+        }
+
+        */
+
+        #pragma omp task default(none) private(arc,red_cost,cond1,cond2)  shared(basket_size,next_iter,perm) firstprivate(arc_strip,STRIP_SIZE,nr_group,stop_arcs)   //depend(inout:basket_size) // spec_private(basket_size) depend(sṕec_inout:basket_size)
+        {
+	     //printf("comencé task2 iteration %d\n",itera);
+            char spec;
+            unsigned status;
+            char flag;
+            long basket_sizeL;
+	     int iter;
+            //cost_t red_cost;
+            //char cond1,cond2;
+
+            ///*
+	     cost_t red_arr[STRIP_SIZE];
+	     long basket_arr[STRIP_SIZE];
+            char cond_arr [STRIP_SIZE];
+	     //*/
+
+            for (arc=arc_strip,iter=0; ((arc-arc_strip)< STRIP_SIZE*nr_group) && (arc < stop_arcs); arc+=nr_group,iter++)
+            {
+
+                cond1= arc->ident > BASIC ;
+
+                if (cond1)
+                {
+                    red_cost = arc->cost - arc->tail->potential + arc->head->potential;
+                    red_arr[iter]=red_cost;
+                    cond2= bea_is_dual_infeasible( arc, red_cost ) ;
+                }//else cond2=1;
+                cond_arr[iter]=cond1&&cond2;
+                
+            }
+	
+
+Retry:
+            if ((next_iter)!=arc_strip)
+            {
+                spec=1;
+                status = _xbegin();
+                if (status!=_XBEGIN_STARTED)
+                    goto Retry;
+            }
+            else{
+                spec=0;
+            }
+
+	     flag=0;
+
+            for (arc=arc_strip,iter=0; ((arc-arc_strip)< STRIP_SIZE*nr_group) && (arc < stop_arcs); arc+=nr_group,iter++)
+            {
+                if(cond_arr[iter] )
+                {
+                    //basket_sizeL=basket_size;
+                    if(!flag)
+                    {
+                        flag=1;
+                        basket_sizeL=basket_size;
+                    }
+                    basket_sizeL++;
+		      basket_arr[iter]=basket_sizeL;                
+		   }
+            }
+
+            if (spec)
+            {
+                if (arc_strip!=next_iter) _xabort(0xff);
+                _xend();
+            }
+
+	     if (flag) basket_size=basket_sizeL;  
+	     next_iter+=nr_group*STRIP_SIZE;
+
+
+	    for (arc=arc_strip,iter=0; ((arc-arc_strip)< STRIP_SIZE*nr_group) && (arc < stop_arcs); arc+=nr_group,iter++)
+            {
+                if(cond_arr[iter])
+                {   red_cost= red_arr[iter];
+		      basket_sizeL= basket_arr[iter];
+                    perm[basket_sizeL]->a = arc;
+                    perm[basket_sizeL]->cost = red_cost;
+                    perm[basket_sizeL]->abs_cost = ABS(red_cost);
+                }
+
+            }
+
+	     //comp2[itera]=1;
+	     //printf("terminé task2 iteration %d\n",itera);
+        }
+
+        /*
+        #pragma omp task default(none) private(arc)  shared(cond_arr,perm, red_arr,basket_arr) firstprivate(arc_strip,STRIP_SIZE,nr_group,stop_arcs,itera,size) depend(in:cond_arr[itera*STRIP_SIZE:size],basket_arr[itera*STRIP_SIZE:size])
+        {
+
+	     //printf("comencé task3 iteration %d\n",itera);
+	     int iter;
+            long basket_sizeL;
+            cost_t red_costL;
+            for (arc=arc_strip,iter=0; ((arc-arc_strip)< STRIP_SIZE*nr_group) && (arc < stop_arcs); arc+=nr_group,iter++)
+            {
+                if(cond_arr[itera*STRIP_SIZE+iter])
+                {   red_costL= red_arr[itera*STRIP_SIZE+iter];
+		      basket_sizeL= basket_arr[itera*STRIP_SIZE+iter];
+                    perm[basket_sizeL]->a = arc;
+                    perm[basket_sizeL]->cost = red_costL;
+                    perm[basket_sizeL]->abs_cost = ABS(red_costL);
+                }
+
+            }
+        }
+        */
+    }
+    #pragma omp taskwait
+    /*
+    }
+    }
+    */
+
+    /*
+    gettimeofday(&end_time, NULL);
+    run_time = ((end_time.tv_sec  - start_time.tv_sec) * 1000000u + end_time.tv_usec - start_time.tv_usec) / 1.e6;
+    //printf("Timer Loop %lf\n",run_time);
+    tiempo_promedio+=run_time;
+    */
+    
+
+    if( ++group_pos == nr_group )
+        group_pos = 0;
+
+    if( basket_size < B && group_pos != old_group_pos )
+        goto NEXT;
+
+    if( basket_size == 0 )
+    {
+        initialize = 1;
+        *red_cost_of_bea = 0;
+        return NULL;
+    }
+
+    sort_basket( 1, basket_size );
+    *red_cost_of_bea = perm[1]->cost;
+    return( perm[1]->a );
+}
+
+
+
+
+
+
+
+
+
+

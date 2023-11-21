@@ -1,0 +1,1212 @@
+-------------------------------
+| Iteracion 1  |
+-------------------------------
+-------------------------------
+| S SIZE 1 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  1
+Nthreads:  4
+Tiempo promedio 3.129703
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.568402
+
+
+-------------------------------
+| S SIZE 2 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  2
+Nthreads:  4
+Tiempo promedio 3.146281
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.679691
+
+
+-------------------------------
+| S SIZE 3 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  3
+Nthreads:  4
+Tiempo promedio 3.172839
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.747210
+
+
+-------------------------------
+| S SIZE 4 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  4
+Nthreads:  4
+Tiempo promedio 3.210074
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.848637
+
+
+-------------------------------
+| S SIZE 5 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  5
+Nthreads:  4
+Tiempo promedio 3.166987
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.845802
+
+
+-------------------------------
+| S SIZE 6 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  6
+Nthreads:  4
+Tiempo promedio 3.175251
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.826933
+
+
+-------------------------------
+| S SIZE 7 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  7
+Nthreads:  4
+Tiempo promedio 3.176234
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.838799
+
+
+-------------------------------
+| S SIZE 8 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  8
+Nthreads:  4
+Tiempo promedio 3.212799
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.904239
+
+
+-------------------------------
+| S SIZE 9 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  9
+Nthreads:  4
+Tiempo promedio 3.193665
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.906079
+
+
+-------------------------------
+| S SIZE 10 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  10
+Nthreads:  4
+Tiempo promedio 3.191191
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.786654
+
+
+-------------------------------
+| S SIZE 11 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  11
+Nthreads:  4
+Tiempo promedio 3.199356
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.887827
+
+
+-------------------------------
+| S SIZE 12 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  12
+Nthreads:  4
+Tiempo promedio 3.182667
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.825267
+
+
+-------------------------------
+| S SIZE 13 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  13
+Nthreads:  4
+Tiempo promedio 3.222013
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.936255
+
+
+-------------------------------
+| S SIZE 14 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  14
+Nthreads:  4
+Tiempo promedio 3.197842
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.815837
+
+
+-------------------------------
+| S SIZE 15 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  15
+Nthreads:  4
+Tiempo promedio 3.137921
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.758411
+
+
+-------------------------------
+| S SIZE 16 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  16
+Nthreads:  4
+Tiempo promedio 3.192320
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.835035
+
+
+-------------------------------
+| S SIZE 17 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  17
+Nthreads:  4
+Tiempo promedio 3.192304
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.849810
+
+
+-------------------------------
+| S SIZE 18 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  18
+Nthreads:  4
+Tiempo promedio 3.192137
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.844183
+
+
+-------------------------------
+| S SIZE 19 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  19
+Nthreads:  4
+Tiempo promedio 3.190216
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.851418
+
+
+-------------------------------
+| S SIZE 20 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  20
+Nthreads:  4
+Tiempo promedio 3.211114
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.919289
+
+
+-------------------------------
+| S SIZE 21 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  21
+Nthreads:  4
+Tiempo promedio 3.195248
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.836265
+
+
+-------------------------------
+| S SIZE 22 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  22
+Nthreads:  4
+Tiempo promedio 3.202248
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.909363
+
+
+-------------------------------
+| S SIZE 23 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  23
+Nthreads:  4
+Tiempo promedio 3.122514
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.549334
+
+
+-------------------------------
+| S SIZE 24 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  24
+Nthreads:  4
+Tiempo promedio 3.200473
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.887827
+
+
+-------------------------------
+| S SIZE 25 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  25
+Nthreads:  4
+Tiempo promedio 3.193661
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.918711
+
+
+
+-------------------------------
+| Iteracion 2  |
+-------------------------------
+-------------------------------
+| S SIZE 1 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  1
+Nthreads:  4
+Tiempo promedio 3.202975
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.848836
+
+
+-------------------------------
+| S SIZE 2 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  2
+Nthreads:  4
+Tiempo promedio 3.190078
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.852527
+
+
+-------------------------------
+| S SIZE 3 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  3
+Nthreads:  4
+Tiempo promedio 3.203035
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.865292
+
+
+-------------------------------
+| S SIZE 4 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  4
+Nthreads:  4
+Tiempo promedio 3.193377
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.938136
+
+
+-------------------------------
+| S SIZE 5 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  5
+Nthreads:  4
+Tiempo promedio 3.144114
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.700734
+
+
+-------------------------------
+| S SIZE 6 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  6
+Nthreads:  4
+Tiempo promedio 3.200275
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.893471
+
+
+-------------------------------
+| S SIZE 7 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  7
+Nthreads:  4
+Tiempo promedio 3.195515
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.869633
+
+
+-------------------------------
+| S SIZE 8 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  8
+Nthreads:  4
+Tiempo promedio 3.183619
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.938344
+
+
+-------------------------------
+| S SIZE 9 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  9
+Nthreads:  4
+Tiempo promedio 3.185416
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.882797
+
+
+-------------------------------
+| S SIZE 10 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  10
+Nthreads:  4
+Tiempo promedio 3.109150
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.476879
+
+
+-------------------------------
+| S SIZE 11 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  11
+Nthreads:  4
+Tiempo promedio 3.193616
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.912972
+
+
+-------------------------------
+| S SIZE 12 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  12
+Nthreads:  4
+Tiempo promedio 3.206169
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.918697
+
+
+-------------------------------
+| S SIZE 13 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  13
+Nthreads:  4
+Tiempo promedio 3.127592
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.446183
+
+
+-------------------------------
+| S SIZE 14 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  14
+Nthreads:  4
+Tiempo promedio 3.197817
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.921596
+
+
+-------------------------------
+| S SIZE 15 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  15
+Nthreads:  4
+Tiempo promedio 3.193070
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.914509
+
+
+-------------------------------
+| S SIZE 16 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  16
+Nthreads:  4
+Tiempo promedio 3.216129
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.932837
+
+
+-------------------------------
+| S SIZE 17 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  17
+Nthreads:  4
+Tiempo promedio 3.193006
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.893580
+
+
+-------------------------------
+| S SIZE 18 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  18
+Nthreads:  4
+Tiempo promedio 3.199190
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.888581
+
+
+-------------------------------
+| S SIZE 19 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  19
+Nthreads:  4
+Tiempo promedio 3.181298
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.868620
+
+
+-------------------------------
+| S SIZE 20 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  20
+Nthreads:  4
+Tiempo promedio 3.188319
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.835845
+
+
+-------------------------------
+| S SIZE 21 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  21
+Nthreads:  4
+Tiempo promedio 3.232637
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.905495
+
+
+-------------------------------
+| S SIZE 22 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  22
+Nthreads:  4
+Tiempo promedio 3.186400
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.845934
+
+
+-------------------------------
+| S SIZE 23 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  23
+Nthreads:  4
+Tiempo promedio 3.182462
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.876713
+
+
+-------------------------------
+| S SIZE 24 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  24
+Nthreads:  4
+Tiempo promedio 3.184635
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.810391
+
+
+-------------------------------
+| S SIZE 25 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  25
+Nthreads:  4
+Tiempo promedio 3.198422
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.875116
+
+
+
+-------------------------------
+| Iteracion 3  |
+-------------------------------
+-------------------------------
+| S SIZE 1 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  1
+Nthreads:  4
+Tiempo promedio 3.183011
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.821424
+
+
+-------------------------------
+| S SIZE 2 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  2
+Nthreads:  4
+Tiempo promedio 3.205497
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.878123
+
+
+-------------------------------
+| S SIZE 3 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  3
+Nthreads:  4
+Tiempo promedio 3.192609
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.809137
+
+
+-------------------------------
+| S SIZE 4 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  4
+Nthreads:  4
+Tiempo promedio 3.174490
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.822073
+
+
+-------------------------------
+| S SIZE 5 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  5
+Nthreads:  4
+Tiempo promedio 3.200287
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.908821
+
+
+-------------------------------
+| S SIZE 6 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  6
+Nthreads:  4
+Tiempo promedio 3.186686
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.815780
+
+
+-------------------------------
+| S SIZE 7 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  7
+Nthreads:  4
+Tiempo promedio 3.181892
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.890295
+
+
+-------------------------------
+| S SIZE 8 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  8
+Nthreads:  4
+Tiempo promedio 3.120073
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.435544
+
+
+-------------------------------
+| S SIZE 9 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  9
+Nthreads:  4
+Tiempo promedio 3.210005
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.918956
+
+
+-------------------------------
+| S SIZE 10 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  10
+Nthreads:  4
+Tiempo promedio 3.137169
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.725427
+
+
+-------------------------------
+| S SIZE 11 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  11
+Nthreads:  4
+Tiempo promedio 3.169589
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.797674
+
+
+-------------------------------
+| S SIZE 12 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  12
+Nthreads:  4
+Tiempo promedio 3.189116
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.833679
+
+
+-------------------------------
+| S SIZE 13 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  13
+Nthreads:  4
+Tiempo promedio 3.190214
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.824310
+
+
+-------------------------------
+| S SIZE 14 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  14
+Nthreads:  4
+Tiempo promedio 3.191699
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.876351
+
+
+-------------------------------
+| S SIZE 15 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  15
+Nthreads:  4
+Tiempo promedio 3.194709
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.868002
+
+
+-------------------------------
+| S SIZE 16 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  16
+Nthreads:  4
+Tiempo promedio 3.194895
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.843740
+
+
+-------------------------------
+| S SIZE 17 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  17
+Nthreads:  4
+Tiempo promedio 3.129648
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.674344
+
+
+-------------------------------
+| S SIZE 18 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  18
+Nthreads:  4
+Tiempo promedio 3.192251
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.845718
+
+
+-------------------------------
+| S SIZE 19 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  19
+Nthreads:  4
+Tiempo promedio 3.185297
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.840863
+
+
+-------------------------------
+| S SIZE 20 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  20
+Nthreads:  4
+Tiempo promedio 3.299222
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 13.402913
+
+
+-------------------------------
+| S SIZE 21 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  21
+Nthreads:  4
+Tiempo promedio 3.199546
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.863658
+
+
+-------------------------------
+| S SIZE 22 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  22
+Nthreads:  4
+Tiempo promedio 3.181220
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.882678
+
+
+-------------------------------
+| S SIZE 23 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  23
+Nthreads:  4
+Tiempo promedio 3.194032
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.803913
+
+
+-------------------------------
+| S SIZE 24 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  24
+Nthreads:  4
+Tiempo promedio 3.196512
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.887239
+
+
+-------------------------------
+| S SIZE 25 |
+-------------------------------
+-------------------------------
+| N Threads 4  |
+-------------------------------
+Strip size:  25
+Nthreads:  4
+Tiempo promedio 3.181364
+simplex iterations         : 334402
+objective value            : 6930121644
+checksum                   : 19565010
+done
+Timer 12.834706
+
+
+
